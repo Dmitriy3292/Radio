@@ -63,20 +63,24 @@ public class Radio {
     public int getCurrentStation() {
         return currentStation;
     }
+
     //Увеличение станции
     public void upStation() {
         if (currentStation < maxStation) {
-            currentStation ++;
+            this.currentStation ++;
+            return;
         }
         this.currentStation = minStation;
     }
     //Уменьшение станции
     public void downStation() {
         if (currentStation > minStation) {
-            currentStation --;
+            this.currentStation --;
+            return;
         }
         this.currentStation = maxStation;
     }
+
     //Установка текущей станции
     public void setCurrentStation(int currentStation) {
         if (currentStation > maxStation) {

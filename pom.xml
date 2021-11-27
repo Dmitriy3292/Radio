@@ -38,19 +38,19 @@
                 <version>0.8.5</version>
                 <executions>
                     <execution>
-                        <id>agent666</id>
+                        <id>agent333</id>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
                     </execution>
                     <execution>
-                        <id>report666</id>
+                        <id>report333</id>
                         <goals>
                             <goal>report</goal>
                         </goals>
                     </execution>
                     <execution>
-                        <id>check666</id>
+                        <id>check333</id>
                         <phase>verify</phase>
                         <goals>
                             <goal>check</goal>
@@ -62,7 +62,7 @@
                         <rule>
                             <limits>
                                 <limit>
-                                    <counter>LINE</counter>
+                                    <counter>BRANCH</counter>
                                     <value>COVEREDRATIO</value>
                                     <minimum>1.0</minimum>
                                 </limit>
@@ -70,11 +70,6 @@
                         </rule>
                     </rules>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>org.jacoco.report</artifactId>
-                <version>0.8.5</version>
             </plugin>
         </plugins>
     </build>
