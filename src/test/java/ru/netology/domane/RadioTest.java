@@ -11,16 +11,16 @@ class RadioTest {
     @Test
     public void shouldMaxVolume() {
         Radio radio = new Radio();
-        radio.setMaxVolume(10);
+        radio.setMaxVolume(100);
         radio.setMinVolume(0);
-        radio.setCurrentVolume(10);
-        assertEquals(10,radio.getCurrentVolume());
+        radio.setCurrentVolume(100);
+        assertEquals(100,radio.getCurrentVolume());
     }
 
     @Test
     public void shouldMinVolume() {
         Radio radio = new Radio();
-        radio.setMaxVolume(10);
+        radio.setMaxVolume(100);
         radio.setMinVolume(0);
         radio.setCurrentVolume(0);
         assertEquals(0,radio.getCurrentVolume());
@@ -28,24 +28,24 @@ class RadioTest {
     @Test
     public void shouldUpVolumeMax() {
         Radio radio = new Radio();
-        radio.setCurrentVolume(9);
+        radio.setCurrentVolume(99);
         radio.upVolume();
-        assertEquals(10,radio.getCurrentVolume());
+        assertEquals(100,radio.getCurrentVolume());
     }
     @Test
     public void shouldUpVolume() {
         Radio radio = new Radio();
-        radio.setCurrentVolume(10);
-        radio.setMaxVolume(10);
+        radio.setCurrentVolume(100);
+        radio.setMaxVolume(100);
         radio.upVolume();
-        assertEquals(10,radio.getCurrentVolume());
+        assertEquals(100,radio.getCurrentVolume());
     }
     @Test
     public void shouldDownVolumeMin() {
         Radio radio = new Radio();
-        radio.setCurrentVolume(9);
+        radio.setCurrentVolume(99);
         radio.downVolume();
-        assertEquals(8, radio.getCurrentVolume());
+        assertEquals(98, radio.getCurrentVolume());
     }
     @Test
     public void shouldDownVolume() {
@@ -135,6 +135,11 @@ class RadioTest {
         radio.setMinStation(0);
         radio.setCurrentStation(-1);
         assertEquals(0,radio.getCurrentStation());
+    }
+    @Test
+    public void shouldNumberOfStation() {
+        Radio radio = new Radio(9);
+        assertEquals(9, radio.getNumberOfStations());
     }
 
     }
