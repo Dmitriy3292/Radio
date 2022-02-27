@@ -11,7 +11,8 @@ public class Radio {
     private int currentStation;
     private int numberOfStations = 10;
 
-    public Radio () {}
+    public Radio() {
+    }
 
     public Radio(int numberOfStations) {
         this.numberOfStations = numberOfStations;
@@ -22,22 +23,29 @@ public class Radio {
     public int getMaxVolume() {
         return maxVolume;
     }
+
     public void setMaxVolume(int maxVolume) {
         this.maxVolume = 100;
     }
+
     // Минимальная  громкость
     public int getMinVolume() {
         return minVolume;
     }
+
     public void setMinVolume(int minVolume) {
         this.minVolume = 0;
     }
+
     // Текущая громкость
     public int getCurrentVolume() {
         return currentVolume;
     }
+
     public void setCurrentVolume(int currentVolume) {
-        this.currentVolume = currentVolume;}
+        this.currentVolume = currentVolume;
+    }
+
     //Увеличение громкости +
     public void upVolume() {
         if (currentVolume == maxVolume) {
@@ -45,6 +53,7 @@ public class Radio {
         }
         this.currentVolume++;
     }
+
     //Уменьшение громкости -
     public void downVolume() {
         if (currentVolume == minVolume) {
@@ -52,21 +61,26 @@ public class Radio {
         }
         this.currentVolume--;
     }
+
     // СТАНЦИИ
     // Максимальная станция
     public int getMaxStation() {
         return maxStation;
     }
+
     public void setMaxStation(int maxStation) {
         this.maxStation = 9;
     }
+
     // Минимальная  станция
     public int getMinStation() {
         return minStation;
     }
+
     public void setMinStation(int minStation) {
         this.minStation = 0;
     }
+
     // Текущая станция
     public int getCurrentStation() {
         return currentStation;
@@ -75,15 +89,16 @@ public class Radio {
     //Увеличение станции
     public void upStation() {
         if (currentStation < maxStation) {
-            this.currentStation ++;
+            this.currentStation++;
             return;
         }
         this.currentStation = minStation;
     }
+
     //Уменьшение станции
     public void downStation() {
         if (currentStation > minStation) {
-            this.currentStation --;
+            this.currentStation--;
             return;
         }
         this.currentStation = maxStation;
@@ -101,7 +116,9 @@ public class Radio {
     }
 
     //Количество станций
-    public int getNumberOfStations () { return numberOfStations; }
+    public int getNumberOfStations() {
+        return numberOfStations;
+    }
 
     public void setNumberOfStations(int numberOfStations) {
         this.numberOfStations = numberOfStations;
