@@ -140,7 +140,7 @@ class RadioTest {
     @Test
     public void shouldCurrentStationMin() {
         Radio radio = new Radio();
-        radio.setMaxStation(9);
+        radio.setMaxStation(10);
         radio.setMinStation(0);
         radio.setCurrentStation(-1);
         assertEquals(0, radio.getCurrentStation());
