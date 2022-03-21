@@ -8,7 +8,7 @@ public class Radio {
     private int currentVolume;
     private int minStation = 0;
     private int currentStation;
-    private int numberOfStations = 10;
+    private int numberOfStations = 9;
 
     public Radio() {
     }
@@ -68,7 +68,7 @@ public class Radio {
     }
 
     public void setMaxStation(int maxStation) {
-        this.numberOfStations = 10;
+        this.numberOfStations = 9;
     }
 
     // Минимальная  станция
